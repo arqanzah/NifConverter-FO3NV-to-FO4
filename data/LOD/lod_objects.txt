@@ -1,0 +1,9 @@
+BSMultiBoundNode
+NiAdditionalGeometryData
+BSMultiBound
+BSSegmentedTriShape
+NiTriShape
+NiTriShapeData
+BSShaderPPLightingProperty
+BSShaderTextureSet
+BSMultiBoundAABB

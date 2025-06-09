@@ -1,0 +1,8 @@
+NiBoolData : animobjects\aobardishrag.nif
+NiTextKeyExtraData : animobjects\aocamera.nif
+NiTransformData : animobjects\aobroom.nif
+NiFloatData : architecture\megaton\megatongatehouse01.nif
+NiPosData : animobjects\aoeatingmeatstick.nif
+NiMorphData : characters\_male\skeleton.nif
+NiAdditionalGeometryData : landscape\lod\dcworld03\dcworld03.level4.x0.y-10.nif
+BSFurnitureMarker : architecture\wasteland\outhouse.nif

@@ -1,0 +1,50 @@
+[LOD OBJECTS Convertion]
+
+Lod setting file:
+Create correct FO4/DATA/LODSettings/FO3Wasteland.LOD file from FO3/DATA/LODSettings/Wasteland.DLODSettings (can be done in hex editor)
+
+FO3:
+MinTerrainLevel(uint)
+MaxTerrainLevel(uint)
+Stride(uint)
+MinX(ushort)
+MinY(ushort)
+MaxX(ushort)
+MaxY(ushort)
+ObjectLevel(uint)
+
+FO4:
+MinX(ushort) = FO3::MinX
+MinY(ushort)  = FO3::MinY
+Stride(uint) = FO3::Stride
+MinLevel(uint) = FO3::MinTerrainLevel
+MaxLevel(uint) = FO3::MaxTerrainLevel
+
+
+NifFiles:
+
+copy from FO3\meshes\landscape\lod\wasteland\blocks to FO4\Meshes\Terrain\FO3Wasteland\Objects (same for texture folder)
+
+1. Convert using NifConverter.
+2. Covert resulting file from step 1 using Elric.
+3. Root BSMultiBoundNode should be wrapped qith NiNode. Add new NiNod as a Root and make BSMultiBoundNode as child of new node.
+4. Use "Fallout3 LOD file finder.vps" to find out coordinates and rename "wasteland.level4.high.x0.y0" to "wasteland.level8.x0.y0.nif".
+for example: "wasteland.level4.high.x12.y-12" should be "FO3Wasteland.8.8.-16".
+5. "level4" should be considered as 4 and "level4.high" as 8 in Fallout 4 format.
+5. Change extention from .nif to .bto
+
+
+[LOD LANDSCAPE Convertion]
+BSMultibountNode shoudl have name "chunk", Bstrishape should have name "Land", Sub BSMultibountNode (if any) name "WATER":
+BSMultibountNode [chunk] {
+	BSTriShape [Land] {}
+	BSMultibountNode [WATER] {
+		BSSubIndexTriShape {}
+		BSMultibound
+	}
+	BSMultibound {}
+}
+Rename "wasteland.level8.x-16.y-16.nif" to "FO3Wasteland.8.-16.-16.btr".
+
+
+

@@ -1,0 +1,97 @@
+
+------------------------------------------ <!crushes> do not convert!!!! -------------------------------------------------
+
+FO3:
+
+a. Old user and user2 version of header:
+dungeons\vaultruined\clutter\terminalinterfacer01.nif
+interface\testloadanim01.nif
+triggers\*.nif
+
+b. NiGeomMorpherController can not be converted at the moment. Crushes Elric.
+birthdaycake01fx.nif
+citadelflag01.nif
+crane_libertyprime01.nif
+crane01.nif
+dartgun.nif
+explosionsplash.nif
+fxharoldheart01.nif
+testexplodecake.nif
+tripwire01.nif
+
+c. Nested collison problem, crushes game
+westfathercorpse.nif
+westmothercorpse.nif
+
+d. Collision
+stairsconcretebroken.nif
+stairsmetalhollow.nif
+stairsmetalsheet.nif
+stairsmetalsolid.nif
+stairswood.nif
+
+FONV:
+
+a. Elric crushes
+dlc05holo04.nif
+dlc05holobumpers.nif
+dlc05holocharge.nif
+dlc05holocirculardoor
+dlc05holocrusher.nif
+dlc05holocryolab.nif
+dlc05holocryopod.nif
+dlc05hologenerator.nif
+dlc05holoteleporter.nif
+dlcpittconveyorpress.nif
+dlcpittconveyorpress02.nif
+greenhousenvint.nif
+hchamberaftereffect.nif
+hchamberfxlso.nif
+hchambergroundfog.nif
+hvwaterblood.nif
+nv_foa_flag.nif
+nv_ncr_flag.nif
+nv_ncr_flag_s.nif
+nv_ncr_flag_s_flipped.nif
+nv_ncr_hangfromtop.nif
+nv_ncr_hangfromtop02.nif
+nv_nevadaflag.nif
+nvgreatkhanflag.nif
+sanddust01.nif
+utilitypolewsingle01nv.nif
+utilitypolewsingle02nv.nif
+utilitypolewsmall01nv.nif
+utilitypolewsmall02nv.nif
+b29_riseanim.nif
+nvnellisartillery.nif
+nv_legionflag.nif
+nv_legionflag_largnopole.nif
+
+b. No Opening after NifConverter:
+nv_blackjack-table.nif
+nv_blackjack-tablea.nif
+nv_blackjack-tableg.nif
+nv_blackjack-tablet.nif
+nv_blackjack-tableu.nif
+nv_blackjack-tablev.nif
+nv_caravan-table.nif
+nv_roulette-table.nif
+nv_roulette-tablea.nif
+nv_roulette-tableg.nif
+nv_roulette-tablet.nif
+nv_roulette-tableu.nif
+nv_roulette-tablev.nif
+boxingtape_go.nif
+
+------------------------------------------ </!crushes> do not convert!!!! -------------------------------------------------
+
+
+
+1. if game and ck crushes check static collection (scoll). Probably scols need to be generated.
+(for example next to dukov place heading towrard water purifier). Just copied scol/ElTesto.esm folder from old converted meshes.
+
+2. Some objects invisible when nialpahproperty's "Enable blending" flag on (4845). if flag set to 4844, mesh becomes visble. 
+example: guncabinet01.nif. Needs to be fixed.
+
+3. Collision problem
+teddybear01.nif
